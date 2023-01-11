@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CarViewer</title>
+    <style>
+        table, th, td {
+            border: 1px solid;
+        }
+    </style>
+</head>
+<body>
+<!--<div>-->
+<!--    <th:block th:each="car : ${cars}">-->
+<!--        <p th:text="${car.getModel()}">Model</p>-->
+<!--        <p th:text="${car.getHp()}">HP</p>-->
+<!--        <p th:text="${car.getUser()}">User</p>-->
+<!--    </th:block>-->
+<!--</div>-->
+<table>
+    <thead>
+    <tr>
+        <th scope="col"> <strong>Model</strong></th>
+        <th scope="col"><strong>HP</strong></th>
+        <th scope="col"><strong>User</strong></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="car: ${cars}">
+        <td th:text="${car.getModel()}">Model</td>
+        <td th:text="${car.getHp()}">HP</td>
+        <td th:text="${car.getUser()}">User</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
